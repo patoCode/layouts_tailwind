@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="container mx-auto bg-slate-800">
+    <br />
+    <h2 class="title">
+      FLEX INITIAL<br />
+      <small class="description">
+        Permite cambiar el width, pero sin dejar que se sobre pasemos el
+        mismo(width)
+      </small>
+    </h2>
+    <div class="content-box flex">
+      <div class="box flex-none w-14">01</div>
+      <div class="box flex-initial w-64">02</div>
+      <div class="box flex-initial w-32">03</div>
+    </div>
+    <!-- INICIO -->
+    <h2 class="title">
+      FLEX-1 <br />
+      <small class="description">
+        Permite al item ocupar el 100% del espacio disponible de forma
+        igualitaria para todos los componentes marcados con (flex-1). IGNORA el
+        width definido
+      </small>
+    </h2>
+    <div class="content-box flex">
+      <div class="box flex-none w-14">01</div>
+      <div class="box flex-1 w-64">02</div>
+      <div class="box flex-1 w-32">03</div>
+    </div>
+    <!-- FIN -->
+    <!-- INICIO -->
+    <h2 class="title">
+      FLEX-AUTO <br />
+      <small class="description">
+        Permite al item crecer y reducir el elemento, pero tomando en cuenta el
+        widht definido inicialmente. Similar al (flex-1) pero obedeciendo los
+        "w-?" definidos
+      </small>
+    </h2>
+    <div class="content-box flex">
+      <div class="box flex-none w-14">01</div>
+      <div class="box flex-auto w-64">02</div>
+      <div class="box flex-auto w-32">03</div>
+    </div>
+    <!-- FIN -->
+    <!-- INICIO -->
+    <h2 class="title">
+      FLEX-NONE <br />
+      <small class="description">
+        Evita el comportamiento flex en los elementos marcados, pero aun permite
+        el uso del "w-?"
+      </small>
+    </h2>
+    <div class="content-box flex">
+      <div class="box flex-none w-14">01</div>
+      <div class="box flex-none w-64">02</div>
+      <div class="box flex-1 w-32">03</div>
+    </div>
+    <!-- FIN -->
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <!-- INICIO -->
+    <h2 class="title">
+      BASIS <br />
+      <small class="description"
+        >Permite dividir el div contenedor en facciones y usar estas fracciones
+        para definir los anchos de los elementos contenidos</small
+      >
+    </h2>
+    <div class="content-box flex flex-row">
+      <div class="box2 basis-1/4">01</div>
+      <div class="box2 basis-1/4">02</div>
+      <div class="box2 basis-1/2">03</div>
+    </div>
+    <!-- FIN -->
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <!-- INICIO -->
+    <h2 class="title">
+      GRIDS<br />
+      <small class="description"
+        >Para usar estos features el contenedor principal debe ser del tipo
+        "GRID". Algo muy particular es que no tenemos q definir el width de
+        ningun elemento.</small
+      >
+    </h2>
+    <div class="content-grid grid grid-cols-4">
+      <div class="box3">01</div>
+      <div class="box3">02</div>
+      <div class="box3">03</div>
+      <div class="box3">04</div>
+      <div class="box3">05</div>
+      <div class="box3">06</div>
+      <div class="box3">07</div>
+      <div class="box3">08</div>
+      <div class="box3">09</div>
+    </div>
+    <!-- FIN -->
+    <!-- INICIO -->
+    <h2 class="title">
+      SUB-GRIDS (COLS)<br />
+      <small class="description"
+        >Permite usar los grids dentro de un contenedor tipo grid. Este
+        comprotamiento es similar al de las tablas en HTML(colspan, cellspan son
+        permitidos)</small
+      >
+    </h2>
+    <div class="content-grid grid grid-cols-4">
+      <div class="box3">01</div>
+      <div class="box3">02</div>
+      <div class="box3">03</div>
+      <div class="box3">04</div>
+      <div class="grid grid-cols-subgrid gap-4 col-span-4">
+        <div class="box3 col-span-4">05 (4 cols)</div>
+        <div class="box3 col-span-3">06 (3 cols)</div>
+        <div class="box3 col-span-2">07 (2cols)</div>
+        <div class="box3 col-span-1">08</div>
+      </div>
+    </div>
+    <!-- FIN -->
+    <!-- INICIO -->
+    <h2 class="title">
+      SUB-GRIDS (ROWS)<br />
+      <small class="description"
+        >Permite usar los grids dentro de un contenedor tipo grid. Este
+        comprotamiento es similar al de las tablas en HTML(colspan, cellspan son
+        permitidos)</small
+      >
+    </h2>
+    <div class="content-grid grid grid-row-3 grid-flow-col">
+      <div class="box3 row-span-3">01 (3 rows)</div>
+      <div class="box3 row-span-2">02 (2 rows)</div>
+      <div class="box3">03</div>
+      <div class="box3">04</div>
+      <div class="box3">05</div>
+    </div>
+    <!-- FIN -->
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <!-- JUSTIFI ELEMENTS -->
+    <h2 class="title">
+      JUSTIFY CONTENT<br />
+      <small class="description"
+        >Permite alinear todos los items del contenedor q aplica esta
+        regla</small
+      >
+    </h2>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <h2 class="title my-5">justify-start</h2>
+        <div class="content-justify flex justify-start">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-center</h2>
+        <div class="content-justify flex justify-center">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-end</h2>
+        <div class="content-justify flex justify-end">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-between</h2>
+        <div class="content-justify flex justify-between">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-around</h2>
+        <div class="content-justify flex justify-around">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-evenly</h2>
+        <div class="content-justify flex justify-evenly">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-stretch</h2>
+        <div class="content-justify flex justify-stretch">
+          <div class="box4">01</div>
+          <div class="box4">02</div>
+          <div class="box4">03</div>
+          <div class="box4">04</div>
+          <div class="box4">05</div>
+        </div>
+      </div>
+    </div>
+    <!-- END JUSTIFI ELEMENTS -->
+    <h2 class="title">
+      JUSTIFY SELF<br />
+      <small class="description"
+        >Permite alinear el elemnto con esta clase, sin importar como estan los
+        demas elementos</small
+      >
+    </h2>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <h2 class="title my-5">justify-self-strech</h2>
+        <div class="content-justify grid justify-items-start">
+          <div class="box4">01</div>
+          <div class="box4 justify-self-stretch">02</div>
+          <div class="box4">03</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-self-center</h2>
+        <div class="content-justify grid justify-items-start">
+          <div class="box4">01</div>
+          <div class="box4 justify-self-center">02</div>
+          <div class="box4">03</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-self-end</h2>
+        <div class="content-justify grid justify-items-start">
+          <div class="box4">01</div>
+          <div class="box4 justify-self-end">02</div>
+          <div class="box4">03</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">justify-self-star</h2>
+        <div class="content-justify grid justify-items-start">
+          <div class="box4">01</div>
+          <div class="box4 justify-self-start">02</div>
+          <div class="box4">03</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <h2 class="title">
+      ALIGN CONTENT<br />
+      <small class="description"
+        >Permite alinear todos los contenidos(DIVs) dentro del div padre</small
+      >
+    </h2>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <h2 class="title my-5">content-start</h2>
+        <div class="content-content grid grid-cols-3 content-start">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-center</h2>
+        <div class="content-content grid grid-cols-3 content-center">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-end</h2>
+        <div class="content-content grid grid-cols-3 content-end">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-between</h2>
+        <div class="content-content grid grid-cols-3 content-between">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-around</h2>
+        <div class="content-content grid grid-cols-3 content-around">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-evenly</h2>
+        <div class="content-content grid grid-cols-3 content-evenly">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">content-stretch</h2>
+        <div class="content-content grid grid-cols-3 content-stretch">
+          <div class="box5">01</div>
+          <div class="box5">02</div>
+          <div class="box5">03</div>
+          <div class="box5">04</div>
+          <div class="box5">05</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <h2 class="title">
+      ALIGN ITEMS<br />
+      <small class="description"
+        >Permite alinear todos los items dentro del padre</small
+      >
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">item-start</h2>
+        <div class="content-content flex items-start">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-3">02</div>
+          <div class="box5 py-12">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">item-center</h2>
+        <div class="content-content flex items-center">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-3">02</div>
+          <div class="box5 py-12">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">item-end</h2>
+        <div class="content-content flex items-end">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-3">02</div>
+          <div class="box5 py-12">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">item-baseline</h2>
+        <div class="content-content flex items-baseline">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-3">02</div>
+          <div class="box5 py-12">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">align self auto</h2>
+        <div class="content-content flex items-stretch">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-12">02</div>
+          <div class="box5 py-3 self-auto">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">align self start</h2>
+        <div class="content-content flex items-stretch">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-12">02</div>
+          <div class="box5 py-3 self-start">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">align self center</h2>
+        <div class="content-content flex items-stretch">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-12">02</div>
+          <div class="box5 py-3 self-center">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+      <div class="flex-auto w-1/4">
+        <h2 class="title my-5">align self end</h2>
+        <div class="content-content flex items-stretch">
+          <div class="box5 py-4">01</div>
+          <div class="box5 py-12">02</div>
+          <div class="box5 py-3 self-end">03</div>
+          <div class="box5 py-8">04</div>
+          <div class="box5 py-4">05</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-600 flex flex-row h-1 my-10 rounded-full"></div>
+    <h2 class="title">
+      PLACE CONTNET(place-content-*)<br />
+      <small class="description"
+        >Permite alinear los items en relacion a su contenedor padre</small
+      >
+    </h2>
+    <div class="grid grid-cols-3 gap-4">
+      <div>
+        <h2 class="title my-5">place-content-center</h2>
+        <div class="content-content grid grid-cols-2 place-content-center">
+          <div class="box6">01</div>
+          <div class="box6">02</div>
+          <div class="box6">03</div>
+          <div class="box6">04</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">place-content-star</h2>
+        <div class="content-content grid grid-cols-2 place-content-start">
+          <div class="box6">01</div>
+          <div class="box6">02</div>
+          <div class="box6">03</div>
+          <div class="box6">04</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">place-content-end</h2>
+        <div class="content-content grid grid-cols-2 place-content-end">
+          <div class="box6">01</div>
+          <div class="box6">02</div>
+          <div class="box6">03</div>
+          <div class="box6">04</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="title my-5">place-content-between</h2>
+        <div class="content-content grid grid-cols-2 place-content-between">
+          <div class="box6">01</div>
+          <div class="box6">02</div>
+          <div class="box6">03</div>
+          <div class="box6">04</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
